@@ -1,0 +1,3 @@
+/Users/valentin/My Projects/C++/JackBlack/cmake-build-debug/CMakeFiles/JackBlack.dir
+/Users/valentin/My Projects/C++/JackBlack/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/valentin/My Projects/C++/JackBlack/cmake-build-debug/CMakeFiles/rebuild_cache.dir
