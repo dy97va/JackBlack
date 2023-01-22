@@ -10,7 +10,7 @@
 
 class Game {
 public:
-    static int playerHandValue;
+    int playerHandValue;
     int dealerHandValue;
     Player player1;
     Player dealer;

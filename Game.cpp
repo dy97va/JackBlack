@@ -36,6 +36,7 @@ void Game:: playRound() {
         displayCard(dealer.hand[i]);
         cout << "  \n";
     }
+    checkForBJorBust();
     hitOrStay();
 }
 
@@ -125,10 +126,10 @@ void Game:: compareHands() {
 }
 
 void Game:: hitOrStay(){
-    getStrategy();
     char hs = 's';
     cout << "\n";
     cout << "Would you like to Stand or Hit\n";
+    getStrategy();
     cout << "Enter S for stand or H for Hit\n";
     cout << "--->";
     cin >> hs;
@@ -139,6 +140,7 @@ void Game:: hitOrStay(){
         showPlayerHand();
         cout << "\n";
         checkForBJorBust();
+        hitOrStay();
     } else if (hs == 'S' || hs == 's') {
         cout << "Your hand is: \n";
         showPlayerHand();
@@ -194,7 +196,6 @@ void Game:: checkForBJorBust() {
     } else {
         playerHandValue = pHandValue;
     }
-
 }
 
 void Game:: displayCard(Card card) {
@@ -245,11 +246,6 @@ void Game:: dealToPlayer() {
         deck[i] = deck[i - 1];
     }
     deck[0] = card;
-}
-
-void Game:: getStrategy() {
-    Action strat = Strategy().strategyTable[playerHandValue][dealer.hand[1].value];
-    cout << "Your best move would be to: " << strat << "\n";
 }
 
 void Game:: dealToDealer() {
@@ -304,4 +300,15 @@ void Game:: rules(){
     cout<<" ------------------------------------------- "<<std::endl;
 }
 
+void Game:: getStrategy() {
+    string move;
+    cout << "player hand value: " << playerHandValue << "  dealer card value: " << dealer.hand[1].value << "\n";
+    Action strat = Strategy().strategyTable[playerHandValue - 4][dealer.hand[1].value - 1];
+    if (strat == HIT) {
+        move = "Hit";
+    } else {
+        move = "Stand";
+    }
+    cout << "(Your best move would be to: " << move << ")\n";
+}
 
