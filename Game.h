@@ -10,7 +10,7 @@
 
 class Game {
 public:
-    int playerHandValue;
+    static int playerHandValue;
     int dealerHandValue;
     Player player1;
     Player dealer;
@@ -31,6 +31,7 @@ public:
     void dealerAction();
     void compareHands();
     void showPlayerHand();
+    void getStrategy();
 };
 
 #endif //JACKBLACK_GAME_H

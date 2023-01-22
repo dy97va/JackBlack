@@ -70,6 +70,12 @@ build CMakeFiles/JackBlack.dir/Player.cpp.o: CXX_COMPILER__JackBlack_Debug /User
   OBJECT_DIR = CMakeFiles/JackBlack.dir
   OBJECT_FILE_DIR = CMakeFiles/JackBlack.dir
 
+build CMakeFiles/JackBlack.dir/Strategy.cpp.o: CXX_COMPILER__JackBlack_Debug /Users/valentin/My$ Projects/C++/JackBlack/Strategy.cpp || cmake_object_order_depends_target_JackBlack
+  DEP_FILE = CMakeFiles/JackBlack.dir/Strategy.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -std=gnu++20
+  OBJECT_DIR = CMakeFiles/JackBlack.dir
+  OBJECT_FILE_DIR = CMakeFiles/JackBlack.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target JackBlack
@@ -78,7 +84,7 @@ build CMakeFiles/JackBlack.dir/Player.cpp.o: CXX_COMPILER__JackBlack_Debug /User
 #############################################
 # Link the executable JackBlack
 
-build JackBlack: CXX_EXECUTABLE_LINKER__JackBlack_Debug CMakeFiles/JackBlack.dir/main.cpp.o CMakeFiles/JackBlack.dir/Card.cpp.o CMakeFiles/JackBlack.dir/Game.cpp.o CMakeFiles/JackBlack.dir/Player.cpp.o
+build JackBlack: CXX_EXECUTABLE_LINKER__JackBlack_Debug CMakeFiles/JackBlack.dir/main.cpp.o CMakeFiles/JackBlack.dir/Card.cpp.o CMakeFiles/JackBlack.dir/Game.cpp.o CMakeFiles/JackBlack.dir/Player.cpp.o CMakeFiles/JackBlack.dir/Strategy.cpp.o
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7
   OBJECT_DIR = CMakeFiles/JackBlack.dir
   POST_BUILD = :

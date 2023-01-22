@@ -4,7 +4,10 @@
 
 #include <iostream>
 #include "Game.h"
+#include "Strategy.h"
+
 using std::cout, std::cin;
+
 
 void Game:: playRound() {
     cout << " ----------------------------- \n";
@@ -122,6 +125,7 @@ void Game:: compareHands() {
 }
 
 void Game:: hitOrStay(){
+    getStrategy();
     char hs = 's';
     cout << "\n";
     cout << "Would you like to Stand or Hit\n";
@@ -243,6 +247,11 @@ void Game:: dealToPlayer() {
     deck[0] = card;
 }
 
+void Game:: getStrategy() {
+    Action strat = Strategy().strategyTable[playerHandValue][dealer.hand[1].value];
+    cout << "Your best move would be to: " << strat << "\n";
+}
+
 void Game:: dealToDealer() {
     Card card = deck[51];
     if (card.value == 1) {
@@ -289,6 +298,7 @@ void Game:: rules(){
     cout<<"|         Welcome to blackjack house        |"<<"\n";
     cout<<"| The Rules Are Simple:                     |"<<"\n";
     cout<<"| Aces can be either 1 or 11 points         |"<<"\n";
+    cout<<"| J,Q,K = 10 points                         |"<<"\n";
     cout<<"| In case of a tie dealer wins              |"<<"\n";
     cout<<"| If you get 21 - you win automatically     |"<<"\n";
     cout<<" ------------------------------------------- "<<std::endl;

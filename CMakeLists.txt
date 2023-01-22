@@ -3,4 +3,4 @@ project(JackBlack)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(JackBlack main.cpp Card.cpp Card.h Game.cpp Game.h Player.cpp Player.h)
+add_executable(JackBlack main.cpp Card.cpp Card.h Game.cpp Game.h Player.cpp Player.h Strategy.cpp Strategy.h)
